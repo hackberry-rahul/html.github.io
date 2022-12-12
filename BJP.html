@@ -1,29 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BJP-Bharatiya Janta Party.</title>
+    <link rel="stylesheet" href="BJPCSS/BJP.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    
-    <section>
+
+    <section class="header">
         <nav>
             <a href="#"><img src="BJP Img/logo_1_0.webp"></a>
 
-            <div class="navbar">
+            <div class="navbar" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">UPCOMING EVENTS</a></li>
+                    <li><a href="#">MLA</a></li>
                     <li><a href="#">MEDIA RESOURCES</a></li>
                     <li><a href="#">BJP LIVE</a></li>
-                    <button>JOIN BJP</button>
-                    <button>MAKE A DONATION</button>
+                    <a href="#" class="hero-btn">JOIN BJP</a>
+                    <a href="#" class="hero-btn">MAKE A DONATION</a>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
+        <div class="text-box">
+            <h1>કડી વિધાનસભા</h1>
+            <a href="#" class="hero-btn">Visit us to know More..</a>
+        </div>
+
     </section>
+
+    <section class="mla">
+        <div class="row">
+            <div class="mla-col1">
+                <img src="BJP Img/our MLA.jpg" alt="MLA,KADI">
+            </div>
+            <div class="mla-col2">
+                <h1>શ્રી કરશનભાઈ પુંજાભાઈ સોલંકી</h1>
+                <p><span>(ધારસભ્ય શ્રી,કડી)</span></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore repellat doloremque enim id aut
+                    praesentium fuga, quia illo numquam delectus blanditiis doloribus vel, sequi nobis consectetur
+                    ducimus debitis repellendus.</p>
+            </div>
+        </div>
+        <div class="row">
+           
+            <div class="mla-col2">
+                <h1>શ્રી નીતિનભાઈ રતિલાલ પટેલ</h1>
+                <p><span>(પૂર્વ ધારસભ્ય શ્રી,કડી,પૂર્વ ધારસભ્ય શ્રી,મહેસાણા, પૂર્વ નાયબ મુખ્ય મંત્રી, ગુજરાત રાજ્ય)</span></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore repellat doloremque enim id aut
+                    praesentium fuga, quia illo numquam delectus blanditiis doloribus vel, sequi nobis consectetur
+                    ducimus debitis repellendus.</p>
+            </div>
+            <div class="mla-col1">
+                <img src="BJP Img/nitin patel.jpg" alt="MLA,KADI">
+            </div>
+        </div>
+
+        </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
 </body>
+
 </html>
