@@ -1,0 +1,227 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+.navbar{
+    background-color:slategrey;
+}
+.navbar-nav a{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    justify-content: space-between;
+    border-radius: 50px;
+}
+.navbar-nav a:hover{
+background: #ffb25a;
+border-radius: 50px;
+}
+.navbar-brand{
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+.navbar-brand .bounce_in_animation{
+    color: #ffb25a;
+}
+@keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      transform: scale(1.15)
+    }
+    70% {
+      transform: scale(.9)
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+  
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(5px);
+    }
+    70% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(-3px);
+    }
+    70% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+  
+  @keyframes spinIn {
+    0% {
+      opacity: 0;
+      transform: rotate(180deg) scale(0);
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      transform: rotate(360deg) scale(1.15)
+    }
+    70% {
+      transform: rotate(360deg) scale(.9)
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+}
+  .video-container {
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100vh;
+    width: 1520;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    z-index: 1000;
+    outline: none !important;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid brown;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #ffb25a;
+    background: #ffb25a;
+    transition: 1s;
+}
+.text-box{
+    width: 90%;
+    color: #fff; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 24px;
+}
+.text-box a{
+    font-size: 20px;
+}
+.course{
+    width: 80%;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    padding-top:100px;
+}
+.course h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.course p{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+}
+.course .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: brown;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course-col h3{
+    text-align: center;
+    font-weight: 800;
+    margin: 10px 0;
+    color: #ffb25a;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.course-col1{
+    flex-basis: 31%;
+    background: brown;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course-col1 h3{
+    text-align: center;
+    font-weight: 800;
+    margin: 10px 0;
+    color: #ffb25a;
+}
+.course-col1:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.course-col2{
+    flex-basis: 31%;
+    background: brown;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course-col2 h3{
+    text-align: center;
+    font-weight: 800;
+    margin: 10px 0;
+    color: #ffb25a;
+}
+.course-col2:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}

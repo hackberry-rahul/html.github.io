@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Task</title>
+    <!-- Jquery -->
+    <script src="Assets/JqueryV3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-animations.js/0.1.0/css-animations.min.js"
+        integrity="sha512-ccBegvp9O+Mwr3jQ2hYRmsWLKxUY02rZBSE+3x7EcLHO3HPC6/ROBMSVfpivfIk7M0NCO6SVeJTNNcK/8GLZ4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Assets/BootstrapV5.2.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/CSS/style.css" />
+</head>
+
+<body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span class="bounce_in_animation">MEET</span> INTERIOR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- video Start -->
+    <section class="video-container">
+    <video autoplay muted loop playinline class="wrapper__video"  src="https://thedesignsguide.com/wp-content/uploads/2021/05/home-video.mp4" type="video/mp4"></video>
+    <div class="text-box">
+        <h1>You Think It. We Build It</h1>
+        <p>Designing decorative homes, shops and offices in an unique way. Checkout our latest projects</p>
+        <a href="#" class="hero-btn">OUR PROJECTS</a>
+    </div>
+    </section>
+    <!-- video End -->
+
+
+    <!-- carosuel Start -->
+    <section class="course">
+        <h1>Our Work</h1>
+        <div class="row">
+            <div class="course-col">
+                <img src="Assets/Images/kitchen.jpg" alt="kitchen">
+                <h3>Kitchen Designs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque ab impedit iure id facere dolore
+                    perspiciatis reprehenderit fuga cumque, ipsa numquam iusto in ipsum. Amet soluta a eum? Voluptatum.
+                </p>
+            </div>
+            
+            <div class="course-col1">
+                <img src="Assets/Images/bedroom.jpg" alt="bedroom">
+                <h3>BedRoom Designs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque ab impedit iure id facere dolore
+                    perspiciatis reprehenderit fuga cumque, ipsa numquam iusto in ipsum. Amet soluta a eum? Voluptatum.
+                </p>
+            </div>
+            <div class="course-col2">
+                <img src="Assets/Images/hall.jpg" alt="hall">
+                <h3>Hall Designs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque ab impedit iure id facere dolore
+                    perspiciatis reprehenderit fuga cumque, ipsa numquam iusto in ipsum. Amet soluta a eum? Voluptatum.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- carosuel end -->
+
+    <!-- Bootstrap JS -->
+    <script src="Assets/BootstrapV5.2.3/js/bootstrap.min.js"></script>
+    <script>
+        (function ($) {
+
+            $.fn.textAnimation = function (animation_speed, text_speed, animation) {
+                var text, i = 0;
+                var $this = $(this);
+
+                // store text and clear
+                text = $this.text();
+                $this.css('white-space', 'pre');
+                $this.html('');
+
+                var addLetter = setInterval(function () {
+                    $this.append(
+                        '<div class="text_animation" style="display: inline-block; animation: ' +
+                        animation + ' ' + animation_speed + 'ms forwards">' + text[i] + '</div>');
+                    i++;
+                    if (i == text.length) clearInterval(addLetter);
+                }, text_speed);
+            }
+        })(jQuery)
+
+
+        var temp = $('.bounce_in_animation').text();
+        var i = 1;
+
+        $('.bounce_in_animation').textAnimation(250, 50, 'bounceIn');
+
+        setInterval(function () {
+            i %= 4;
+            $('.bounce_in_animation').html(temp);
+            switch (i) {
+                case 0:
+                    $('.bounce_in_animation').textAnimation(250, 50, 'bounceIn');
+                    break;
+                case 1:
+                    $('.bounce_in_animation').textAnimation(250, 50, 'slideDown');
+                    break;
+                case 2:
+                    $('.bounce_in_animation').textAnimation(250, 50, 'slideUp');
+                    break;
+                default:
+                    $('.bounce_in_animation').textAnimation(250, 50, 'spinIn');
+            }
+            i++;
+        }, 1000 + 50 * temp.length + 250);
+    </script>
+</body>
+
+</html>
